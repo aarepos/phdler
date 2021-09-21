@@ -1,11 +1,8 @@
 from pyrogram import Client, filters
+r = "^(https://)?(www.)?pornhub.com/.*viewkey=.*$"
 
-@Client.on_message()
+@Client.on_message(filters.private & filters.regex(r))
 def get_pornhub_link(client, message):
 
-    url = message.text
-    message.reply_text(str(message))
-    # if 'pornhub.com' not in url:
-    #     return
-
-    # message.reply_text('I got your url, Thank you.')
+    pass
+    
